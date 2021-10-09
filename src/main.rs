@@ -151,7 +151,7 @@ fn main() {
 
     // render(&mut pixels, bounds, upper_left, lower_right);
 
-    let threads = 8;
+    let threads = num_cpus::get();
     let rows_per_band = bounds.1 / threads + 1;
 
     {
